@@ -15,8 +15,16 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="TaskList" component={TaskListScreen} />
-        <Stack.Screen name="AddTask" component={AddTaskScreen} />
+        <Stack.Screen
+          name="TaskList"
+          component={TaskListScreen}
+          options={{ title: "Lista de Tarefas" }}
+        />
+        <Stack.Screen
+          name="AddTask"
+          component={AddTaskScreen}
+          options={{ title: "Adicionar tarefa" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
