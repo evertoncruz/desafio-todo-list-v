@@ -30,6 +30,11 @@ const TaskListScreen = () => {
             style={[styles.task, item.completed && styles.completed]}
           >
             <Text style={styles.taskText}>{item.title}</Text>
+            <Text
+              style={[styles.taskStatus, item.completed && styles.completed]}
+            >
+              {item.completed ? "Concluído" : "Pendente"}
+            </Text>
           </TouchableOpacity>
         )}
       />
@@ -52,6 +57,7 @@ const styles = StyleSheet.create({
   },
   completed: { backgroundColor: "#d3ffd3" },
   taskText: { fontSize: 18 },
+  taskStatus: { fontSize: 10, fontWeight: "bold" },
 });
 
 export default TaskListScreen;
