@@ -16,7 +16,6 @@ type NavigationProps = StackNavigationProp<RootStackParamList, "TaskList">;
 
 const TaskListScreen = () => {
   const navigation = useNavigation<NavigationProps>();
-  // const navigation = useNavigation();
   const { tasks, toggleTaskStatus, clearCompleted } = useTasks();
 
   return (
